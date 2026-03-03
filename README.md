@@ -38,7 +38,7 @@ SpanId: b7ad6b7169203331
 
 ```bash
 curl -fsSL -o opentelemetry-javaagent-extensions.jar \
-  "https://github.com/weworkto/opentelemetry-javaagent-extensions/releases/download/v2.25.0/opentelemetry-javaagent-extensions-2.25.0.jar"
+  "https://github.com/weworkto/opentelemetry-javaagent-extensions/releases/download/2.25.0/opentelemetry-javaagent-extensions-2.25.0.jar"
 ```
 
 ### 2. 启动应用
@@ -69,7 +69,7 @@ RUN curl -fsSL -o /agent/opentelemetry-javaagent.jar \
     "https://github.com/open-telemetry/opentelemetry-java-instrumentation/releases/download/v${OTEL_AGENT_VERSION}/opentelemetry-javaagent.jar"
 
 RUN curl -fsSL -o /agent/opentelemetry-javaagent-extensions.jar \
-    "https://github.com/weworkto/opentelemetry-javaagent-extensions/releases/download/v${OTEL_EXT_VERSION}/opentelemetry-javaagent-extensions-${OTEL_EXT_VERSION}.jar"
+    "https://github.com/weworkto/opentelemetry-javaagent-extensions/releases/download/${OTEL_EXT_VERSION}/opentelemetry-javaagent-extensions-${OTEL_EXT_VERSION}.jar"
 ```
 
 ## Kubernetes 部署
@@ -143,8 +143,8 @@ opentelemetry-javaagent-extensions/
 推送版本 tag 即可触发自动构建和发布：
 
 ```bash
-git tag v2.25.0
-git push origin v2.25.0
+git tag 2.25.0
+git push origin 2.25.0
 ```
 
 GitHub Actions 会自动构建 JAR 并创建 [Release](https://github.com/weworkto/opentelemetry-javaagent-extensions/releases)。

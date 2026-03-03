@@ -38,7 +38,7 @@ Grab the latest JAR from [Releases](https://github.com/weworkto/opentelemetry-ja
 
 ```bash
 curl -fsSL -o opentelemetry-javaagent-extensions.jar \
-  "https://github.com/weworkto/opentelemetry-javaagent-extensions/releases/download/v2.25.0/opentelemetry-javaagent-extensions-2.25.0.jar"
+  "https://github.com/weworkto/opentelemetry-javaagent-extensions/releases/download/2.25.0/opentelemetry-javaagent-extensions-2.25.0.jar"
 ```
 
 ### 2. Run with your application
@@ -69,7 +69,7 @@ RUN curl -fsSL -o /agent/opentelemetry-javaagent.jar \
     "https://github.com/open-telemetry/opentelemetry-java-instrumentation/releases/download/v${OTEL_AGENT_VERSION}/opentelemetry-javaagent.jar"
 
 RUN curl -fsSL -o /agent/opentelemetry-javaagent-extensions.jar \
-    "https://github.com/weworkto/opentelemetry-javaagent-extensions/releases/download/v${OTEL_EXT_VERSION}/opentelemetry-javaagent-extensions-${OTEL_EXT_VERSION}.jar"
+    "https://github.com/weworkto/opentelemetry-javaagent-extensions/releases/download/${OTEL_EXT_VERSION}/opentelemetry-javaagent-extensions-${OTEL_EXT_VERSION}.jar"
 ```
 
 ## Kubernetes Deployment
@@ -143,8 +143,8 @@ opentelemetry-javaagent-extensions/
 Push a version tag to trigger automated build & release:
 
 ```bash
-git tag v2.25.0
-git push origin v2.25.0
+git tag 2.25.0
+git push origin 2.25.0
 ```
 
 GitHub Actions will build the JAR and create a [Release](https://github.com/weworkto/opentelemetry-javaagent-extensions/releases) with the artifact attached.
